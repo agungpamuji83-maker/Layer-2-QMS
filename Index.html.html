@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Sheet Master Verifikasi & Executive Summary - LPA Layer 2 Supervisor QMS (Professional 20 Item)</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: #f1f5f9; padding: 12px; color: #1e293b; }
+        .container { max-width: 1850px; margin: 0 auto; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #cbd5e1; overflow: hidden; }
+        
+        .header-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-bottom: 2px solid #cbd5e1; background: #ffffff; flex-wrap: wrap; gap: 14px; }
+        .header-title-box { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+        
+        .logo-box { background: #ffffff; padding: 4px 10px; border-radius: 8px; border: 1px solid #cbd5e1; box-shadow: 0 1px 3px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 10px; }
+        
+        .action-btns { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        .btn { border: none; padding: 9px 16px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; color: white; transition: 0.2s; }
+        .btn-blue { background-color: #0284c7; }
+        .btn-green { background-color: #059669; }
+        .btn-gray { background-color: #475569; }
+        .btn-purple { background-color: #7c3aed; }
+        .btn-orange { background-color: #d97706; }
+        .btn-teal { background-color: #0d9488; }
+        .btn-indigo { background-color: #4f46e5; }
+        .btn:hover { opacity: 0.9; }
+
+        .sub-header-bar { background: #1F4E78; color: white; padding: 10px 20px; font-size: 11px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; letter-spacing: 0.3px; }
+        .sub-header-bar span.form-id { background: #0f172a; padding: 3px 8px; border-radius: 4px; font-family: monospace; font-size: 10.5px; }
+
+        .content-area { padding: 16px; }
+
+        /* Executive Summary Report Styles */
+        .audit-summary-container { border: 1.5px solid #1F4E78; border-radius: 8px; background-color: #ffffff; margin-bottom: 16px; overflow: hidden; }
+        .audit-header { display: flex; justify-content: space-between; align-items: center; background-color: #f8fafc; padding: 12px 16px; border-bottom: 1px solid #cbd5e1; flex-wrap: wrap; gap: 8px; }
+        .audit-title { font-size: 11.5px; font-weight: 800; color: #1F4E78; text-transform: uppercase; margin: 0; display: flex; align-items: center; gap: 8px; }
+        .badge-status { padding: 5px 10px; border-radius: 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.3px; }
+        .audit-body { display: grid; grid-template-columns: 1.2fr 1.5fr 2.3fr; gap: 12px; padding: 14px; background-color: #ffffff; }
+        @media (max-width: 900px) { .audit-body { grid-template-columns: 1fr; } }
+        .audit-card { border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; background-color: #f8fafc; display: flex; flex-direction: column; justify-content: center; }
+        .card-label { font-size: 9.5px; font-weight: 800; color: #64748b; text-transform: uppercase; margin-bottom: 6px; }
+        .card-value-primary { font-size: 22px; font-weight: 900; color: #059669; }
+        .card-desc { font-size: 11px; color: #334155; line-height: 1.4; margin: 0; }
+
+        /* Metadata & Dashboard Section */
+        .meta-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+        .meta-title { font-size: 11px; font-weight: 800; color: #1F4E78; text-transform: uppercase; margin-bottom: 12px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; }
+        .grid-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+        .meta-item { display: flex; flex-direction: column; gap: 4px; }
+        .meta-item label { font-size: 10.5px; font-weight: 700; color: #475569; }
+        .meta-item input, .meta-item select { padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 11px; font-weight: 700; color: #0f172a; background: white; outline: none; }
+        .meta-item select { cursor: pointer; }
+        .meta-highlight { border: 1.5px solid #0284c7 !important; background: #f0f9ff !important; color: #0369a1 !important; }
+
+        .dashboard-grid { display: grid; grid-template-columns: 55fr 45fr; gap: 16px; margin-bottom: 16px; align-items: stretch; }
+        @media(max-width: 1200px) { .dashboard-grid { grid-template-columns: 1fr; } }
+        
+        .kpi-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .kpi-card { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 8px 4px; text-align: center; display: flex; flex-direction: column; justify-content: center; height: 62px; }
+        .kpi-card span.title { font-size: 9px; font-weight: 700; text-transform: uppercase; color: #64748b; margin-bottom: 2px; }
+        .kpi-card span.val { font-size: 15px; font-weight: 900; color: #0f172a; }
+        .kpi-ya { background: #ecfdf5; border-color: #a7f3d0; }
+        .kpi-ya span.val { color: #059669; }
+        .kpi-tidak { background: #fff1f2; border-color: #fecdd3; }
+        .kpi-tidak span.val { color: #e11d48; }
+        .kpi-rate { background: #059669; color: white; border-color: #059669; grid-column: span 1; height: 62px; }
+        .kpi-rate span.title { color: #d1fae5; font-size: 8.5px; }
+        .kpi-rate span.val { color: white; font-size: 16px; }
+
+        .chart-box { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 8px 12px; display: flex; flex-direction: column; justify-content: space-between; height: 132px; }
+        .chart-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }
+        .chart-header span.title { font-size: 10px; font-weight: 800; color: #1F4E78; text-transform: uppercase; }
+        .chart-header span.tag { font-size: 9px; font-weight: 700; color: #059669; background: #ecfdf5; padding: 2px 5px; border-radius: 4px; border: 1px solid #a7f3d0; }
+        .chart-bars { display: flex; align-items: flex-end; justify-content: center; gap: 40px; height: 65px; padding-top: 4px; border-bottom: 2px solid #e2e8f0; }
+        .bar-group { display: flex; flex-direction: column; align-items: center; gap: 2px; position: relative; }
+        
+        .bar-val { font-size: 11px; font-weight: 900; margin-bottom: 2px; height: 16px; line-height: 16px; text-align: center; }
+        #barYesVal { color: #059669; }
+        #barNoVal { color: #e11d48; }
+
+        .bar { width: 35px; background: #059669; border-radius: 3px 3px 0 0; transition: height 0.3s; }
+        .bar-red { background: #e11d48; }
+        .bar-label { font-size: 9.5px; font-weight: 700; color: #64748b; margin-top: 2px; }
+
+        .guide-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px; }
+        .guide-item { padding: 8px 10px; border-radius: 6px; border: 1px solid; font-size: 10.5px; line-height: 1.4; }
+        .guide-high { background: #fff1f2; border-color: #fecdd3; color: #9f1239; }
+        .guide-med { background: #fefce8; border-color: #fef08a; color: #854d0e; }
+        .guide-low { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
+
+        .table-wrap { overflow-x: auto; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 16px; }
+        table { width: 100%; min-width: 1750px; border-collapse: collapse; font-size: 11px; background: white; }
+        th { background: #1F4E78; color: white; padding: 10px 6px; font-weight: 700; text-align: center; border: 1px solid #94a3b8; }
+        th.col-no { background: #1F4E78; color: white; }
+        td { padding: 6px; border: 1px solid #cbd5e1; vertical-align: middle; }
+        tr:hover { background: #f8fafc; }
+        .col-no { text-align: center; font-weight: 700; width: 40px; background: #f8fafc; }
+        .col-pilar { width: 145px; text-align: center; }
+        .col-status { width: 90px; text-align: center; }
+        .col-risk { width: 100px; text-align: center; }
+        .col-action-status { width: 110px; text-align: center; }
+        
+        .cell-select, .cell-input { width: 100%; padding: 5px 6px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 11px; background: white; outline: none; font-family: inherit; }
+        .cell-select { font-weight: 700; cursor: pointer; }
+        .cell-select:focus, .cell-input:focus { border-color: #0284c7; box-shadow: 0 0 0 2px rgba(2,132,199,0.15); }
+
+        .status-ya { background: #dcfce7 !important; color: #15803d !important; border-color: #86efac !important; font-weight: 800; }
+        .status-tidak { background: #fee2e2 !important; color: #b91c1c !important; border-color: #fca5a5 !important; font-weight: 800; }
+        .status-na { background: #f1f5f9 !important; color: #475569 !important; border-color: #cbd5e1 !important; font-weight: 800; }
+
+        .risk-high { background: #fee2e2 !important; color: #b91c1c !important; border-color: #fca5a5 !important; font-weight: 800; }
+        .risk-med { background: #fef9c3 !important; color: #a16207 !important; border-color: #fde047 !important; font-weight: 800; }
+        .risk-low { background: #dcfce7 !important; color: #15803d !important; border-color: #86efac !important; font-weight: 800; }
+
+        .act-status-open { background: #fef2f2 !important; color: #dc2626 !important; border-color: #fecaca !important; font-weight: 800; }
+        .act-status-progress { background: #fefce8 !important; color: #ca8a04 !important; border-color: #fef08a !important; font-weight: 800; }
+        .act-status-closed { background: #f0fdf4 !important; color: #16a34a !important; border-color: #bbf7d0 !important; font-weight: 800; }
+
+        .main-comment-box { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+        .main-comment-box label { font-size: 11px; font-weight: 800; color: #1F4E78; text-transform: uppercase; display: block; margin-bottom: 6px; }
+        .main-comment-box textarea { width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 11px; font-family: inherit; resize: vertical; background: #fffdf4; outline: none; min-height: 70px; }
+        .main-comment-box textarea:focus { border-color: #0284c7; box-shadow: 0 0 0 2px rgba(2,132,199,0.15); }
+
+        .sign-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, minmax(320px, 360px)); 
+            justify-content: center; 
+            gap: 16px; 
+            background: #f8fafc; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 8px; 
+            padding: 16px; 
+            margin-bottom: 10px; 
+        }
+        @media(max-width: 1000px) { .sign-grid { grid-template-columns: 1fr; } }
+        
+        .sign-card { background: white; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; position: relative; }
+        .sign-card span.role { font-size: 10.5px; font-weight: 800; color: #475569; text-transform: uppercase; margin-bottom: 6px; }
+
+        .sign-line { height: 45px; border-bottom: 1px dashed #94a3b8; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #94a3b8; font-style: italic; overflow: hidden; }
+        .sign-card input.name { width: 100%; text-align: center; font-weight: 800; font-size: 11px; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px; background: #f8fafc; outline: none; color: #0f172a; margin-bottom: 4px; }
+        .sign-card input.title { width: 100%; text-align: center; font-size: 10px; border: none; color: #64748b; background: transparent; outline: none; }
+        
+        .digital-stamp { display: none; font-size: 10px; font-weight: 800; color: #059669; background: #ecfdf5; border: 1px dashed #059669; padding: 4px; border-radius: 4px; width: 100%; text-align: center; margin-bottom: 6px; }
+
+        @page { size: landscape; margin: 6mm; }
+        @media print {
+            body { padding: 0 !important; background: white !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .container { box-shadow: none !important; border: none !important; }
+            .action-btns, .btn-sign { display: none !important; }
+            .table-wrap { overflow: visible !important; border: none !important; }
+            table { min-width: 100% !important; font-size: 8px !important; }
+            th, td { padding: 3px 2px !important; }
+            textarea { resize: none !important; border: none !important; background: transparent !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Top -->
+        <div class="header-top">
+            <div class="logo-box">
+                    <img class="logo-img" src=data:image/png;base64,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
+                </div>
+                <div style="font-size: 20px; font-weight: 1000; color: #0f172a; text-transform: uppercase;" id="headerSubTitle">
+                    LAYERED PROCESS AUDIT (LPA) - LAYER 2 QUALITY MANAGEMENT SYSTEM (QMS) 
+                </div>
+            </div>
+            <div class="action-btns">
+                <button class="btn btn-green" onclick="setAllYes()">Set All 'Ya'</button>
+                <button class="btn btn-blue" onclick="window.print()">Cetak / Simpan PDF</button>
+                <button class="btn btn-indigo" onclick="downloadHtmlFile()">📥 Download HTML</button>
+                <button class="btn btn-teal" onclick="saveFormLocally()">💾 Simpan Form</button>
+                <button class="btn btn-orange" onclick="submitToDatabase()">☁️ Submit ke Database</button>
+                <button class="btn btn-gray" onclick="resetForm()">Reset Form</button>
+                <style>html,body{overflow-x:auto!important}.header-top,.header-title-box,.logo-box{max-width:100vw!important;overflow:hidden!important}.content-area{width:100%!important;max-width:100vw!important;overflow-x:auto!important;display:block!important}table{min-width:1550px!important}</style>
+            </div>
+        </div>
+
+        <!-- Sub Header Bar -->
+        <div class="sub-header-bar">
+            <span id="subFormTitle">VERIFIKASI SYSTEM, 5S OFFICE/LAB, PENGUJIAN MATERIAL & MANAJEMEN PERUBAHAN</span>
+            <span class="form-id" id="formIdText">FORM: LPA-QMS-L2-PROFESSIONAL.20</span>
+        </div>
+
+        <div class="content-area">
+            
+            <!-- EXECUTIVE SUMMARY REPORT SECTION -->
+            <div class="audit-summary-container">
+                <div class="audit-header">
+                    <h3 class="audit-title">📊 EXECUTIVE SUMMARY REPORT – RINGKASAN AUDIT LAYER 2</h3>
+                    <div id="summaryBadge" class="badge-status" style="background-color: #ecfdf5; color: #059669; border: 1px solid #a7f3d0;">
+                        STATUS: FULLY CONFORMANCE / OPTIMAL
+                    </div>
+                </div>
+                <div class="audit-body">
+                    <div class="audit-card">
+                        <div class="card-label">Tingkat Kepatuhan (Compliance Rate)</div>
+                        <div id="sumComplianceRate" class="card-value-primary">100.0%</div>
+                        <p id="sumRateDesc" class="card-desc" style="margin-top: 6px; font-size: 10.5px; color: #64748b;">
+                            Memenuhi ambang batas implementasi sistem manajemen mutu, 5S office/lab QMS, pengujian seluruh material/produk, serta manajemen perubahan dokumen.
+                        </p>
+                    </div>
+                    <div class="audit-card">
+                        <div class="card-label">Total Temuan / Ketidaksesuaian </div>
+                        <div id="sumTotalFail" class="card-value-primary" style="color: #059669;">0 Item</div>
+                        <p id="sumFailDesc" class="card-desc" style="margin-top: 6px;">
+                            Tidak teridentifikasi celah pada audit internal, kendali MOC, pengujian sertifikasi produk, maupun standar kebersihan 5S.
+                        </p>
+                    </div>
+                    <div class="audit-card">
+                        <div class="card-label">Rekomendasi Tindak Lanjut & Rincian Temuan</div>
+                        <p id="sumRecommendation" class="card-desc">
+                            <strong>Optimal Performance:</strong> Seluruh 20 parameter verifikasi Supervisor QMS berjalan sangat baik sesuai standar profesional perusahaan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metadata Header Section -->
+            <div class="meta-box">
+                <div class="meta-title">INFORMASI HEADER AUDIT (TERSINKRON OTOMATIS KE LEMBAR TANDA TANGAN)</div>
+                <div class="grid-meta">
+                    <div class="meta-item">
+                        <label>Dept/Area Audit:</label>
+                        <input type="text" id="metaArea" class="meta-highlight" oninput="updateAreaSelection()" value="" placeholder="Ketik Dept/Area Audit...">
+                    </div>
+                    <div class="meta-item">
+                        <label>Auditor Layer 2 (Ketik Nama):</label>
+                        <input type="text" id="metaAuditor" class="meta-highlight" value="" oninput="syncManualSelection()" placeholder="Ketik nama Auditor...">
+                    </div>
+                    <div class="meta-item">
+                        <label>Auditee Layer 2 (Ketik Nama):</label>
+                        <input type="text" id="metaAuditee" class="meta-highlight" value="" oninput="syncManualSelection()" placeholder="Ketik nama Auditee...">
+                    </div>
+                    <div class="meta-item">
+                        <label>Frekuensi Pelaksanaan:</label>
+                        <select id="metaFrequency">
+                            <option>Bulanan / Rutin Verifikasi Layer 2</option>
+                            <option>Mingguan</option>
+                        </select>
+                    </div>
+                    <div class="meta-item">
+                        <label>Tanggal Audit:</label>
+                        <input type="date" id="auditDate" class="meta-highlight">
+                    </div>
+                    <div class="meta-item">
+                        <label>Shift / Periode:</label>
+                        <select id="auditShift">
+                            <option value="General / Regular Working Hours">General / Regular Working Hours</option>
+                            <option value="Shift 1 (Pagi)">Shift 1 (Pagi)</option>
+                            <option value="Shift 2 (Sore)">Shift 2 (Sore)</option>
+                        </select>
+                    </div>
+                    <div class="meta-item">
+                        <label>Manager Layer 3 (Ketik Nama):</label>
+                        <input type="text" id="metaL2" class="meta-highlight" value="" oninput="syncManualSelection()" placeholder="Ketik nama Manager...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard & Chart Analytics -->
+            <div class="dashboard-grid">
+                <div class="kpi-container">
+                    <div class="kpi-card">
+                        <span class="title">TOTAL ITEM</span>
+                        <span class="val" id="countTotal">20</span>
+                    </div>
+                    <div class="kpi-card kpi-ya">
+                        <span class="title">TOTAL YA (PASS)</span>
+                        <span class="val" id="countYes">20</span>
+                    </div>
+                    <div class="kpi-card kpi-tidak">
+                        <span class="title">TOTAL TIDAK (FAIL)</span>
+                        <span class="val" id="countNo">0</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="title">TOTAL NA (SKIP)</span>
+                        <span class="val" id="countNA">0</span>
+                    </div>
+                    <div class="kpi-card">
+                        <span class="title">POIN AKTIF</span>
+                        <span class="val" id="countActive">20</span>
+                    </div>
+                    <div class="kpi-card kpi-rate">
+                        <span class="title">COMPLIANCE RATE</span>
+                        <span class="val" id="compliancePercent">100.0%</span>
+                    </div>
+                </div>
+
+                <div class="chart-box">
+                    <div class="chart-header">
+                        <span class="title">GRAFIK VERIFIKASI SUPERVISOR QMS (20 ITEM)</span>
+                        <span class="tag" id="statusBadge">Live SVG Active</span>
+                    </div>
+                    <div class="chart-bars">
+                        <div class="bar-group">
+                            <div class="bar-val" id="barYesVal">20</div>
+                            <div class="bar" id="barYes" style="height: 42px;"></div>
+                            <span class="bar-label">Ya (Pass)</span>
+                        </div>
+                        <div class="bar-group">
+                            <div class="bar-val" id="barNoVal">0</div>
+                            <div class="bar bar-red" id="barNo" style="height: 0px;"></div>
+                            <span class="bar-label">Tidak (Fail)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panduan Kategori Risiko -->
+            <div class="guide-box">
+                <div class="guide-item guide-high">
+                    <b>🔴 HIGH (Kritis):</b> Pelanggaran berat standar sistem mutu & pengujian (misal: lolosnya hasil pengujian material/produk tanpa verifikasi, tidak terkendalinya MOC dokumen kritis, atau kegagalan penutupan temuan audit mayor/ANCR).
+                </div>
+                <div class="guide-item guide-med">
+                    <b>🟠 MEDIUM (Signifikan):</b> Keterlambatan jadwal audit internal IKMS, kendala minor training records karyawan, belum optimalnya update dokumen di ISO Online, atau penurunan standar kebersihan 5S di area office/lab QMS.
+                </div>
+                <div class="guide-item guide-low">
+                    <b>🟢 LOW (Minor / Observasi):</b> Kerapian arsip fisik dokumen pendukung QMS, penataan file digital prosedur, atau saran peningkatan efisiensi format formulir mutu. <b>Edukasi manajerial langsung.</b>
+                </div>
+            </div>
+
+            <!-- Table Checklist Utama (20 Item Professional Supervisor QMS Layer 2) -->
+            <div class="table-wrap">
+                <table id="lpaTable">
+                    <thead>
+                        <tr>
+                            <th class="col-no">No</th>
+                            <th class="col-pilar">Key Area (5M + 1E)</th>
+                            <th style="text-align: left; width: 230px;">Item Pertanyaan Verifikasi</th>
+                            <th style="text-align: left; width: 210px;">Kriteria Standar Acuan ("Ya")</th>
+                            <th class="col-risk">Kategori Risiko</th>
+                            <th class="col-status">Status</th>
+                            <th style="text-align: left; width: 200px;">Catatan Temuan / Bukti Objektif (Boleh ditambahkan auditor)</th>
+                            <th style="text-align: left; width: 200px;">Action Plan (Boleh ditambahkan auditor)</th>
+                            <th class="col-action-status">Status Action</th>
+                            <th style="text-align: left; width: 170px;">Remarks (Boleh ditambahkan auditor)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <script>
+                            const defaultItems_20 = [
+                                {
+                                    pilar: "Method",
+                                    q: "1. Apakah master audit plan (yearly) untuk Quality Management System (ISO 9001, 14001, 45001, 17025, SNI, Halal, TKDN, AEO) disusun dan diimplementasikan secara profesional sesuai cakupan sertifikasi?",
+                                    std: "ISO 9001 / ISO 14001 / ISO 45001 Clause 9.2\n(Yearly Audit Plan & Certification Scope)",
+                                    risk: "High",
+                                    ansYa: { f: "Master audit plan tahunan QMS tersusun lengkap dan mencakup seluruh standar sertifikasi plant", a: "Pertahankan konsistensi jadwal audit", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Master audit plan belum mencakup seluruh standar wajib atau terlambat disahkan", a: "Segera lengkapi cakupan audit plan dan sosialisasikan ke departemen", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Cakupan standar tidak aktif pada periode ini (N/A)", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "2. Apakah jadwal audit IKMS (Indah Kiat Management System) untuk QMS di IKK dikelola dan dilaksanakan sesuai standar operasional yang ditetapkan?",
+                                    std: "IKMS Internal Standard / ISO 9001 Clause 9.2\n(Indah Kiat Management System Audit Schedule)",
+                                    risk: "Medium",
+                                    ansYa: { f: "Jadwal audit IKMS IKK berjalan tertib sesuai cakupan area sertifikasi mutu", a: "Pertahankan kedisiplinan audit IKMS", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Pelaksanaan audit IKMS tertunda dari jadwal yang ditetapkan dalam program", a: "Reschedule audit IKMS dan kejar target penyelesaian", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Audit IKMS dijadwalkan pada kuartal berikutnya", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "3. Apakah pelaksanaan audit internal dan eksternal QMS dilaksanakan secara objektif, independen, dan dikelola secara efektif oleh Supervisor?",
+                                    std: "ISO 9001:2015 - Clause 9.2 (Internal Audit Execution)\n(Objective Internal & External Audit Management)",
+                                    risk: "High",
+                                    ansYa: { f: "Audit internal dan eksternal QMS terlaksana objektif sesuai target waktu dan metodologi efektif", a: "Pertahankan efektivitas pelaksanaan audit", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Temuan audit belum diselesaikan atau pelaksanaan audit melenceng dari prosedur objektif", a: "Percepat tindak lanjut temuan audit bersama auditee", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Tidak ada agenda audit pada bulan berjalan", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Environment",
+                                    q: "4. Apakah penerapan 5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke) di area Office QMS, ruang arsip dokumen mutu, dan laboratorium QMS dilaksanakan secara konsisten dan terstandar?",
+                                    std: "5S Workplace Organization & QMS Office Housekeeping\n(QMS Office, Archive & Lab 5S Excellence)",
+                                    risk: "Medium",
+                                    ansYa: { f: "Penerapan 5S di office QMS, ruang arsip, dan lab terjaga sangat bersih, rapi, dan teratur", a: "Pertahankan standar 5S office harian", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Penerapan 5S di office QMS menurun, arsip dokumen berantakan atau meja kerja kotor", a: "Jadwalkan kegiatan perbaikan 5S dan rapikan area kerja QMS", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Area dalam penataan ulang", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Measurement",
+                                    q: "5. Apakah proses pengujian dan pengetesan untuk seluruh material dan produk (seperti uji fisik kertas, recycleable, repulpable, biodegradable, FDA, RoHS) dikelola dan diverifikasi keakuratannya?",
+                                    std: "ISO/IEC 17025 / Comprehensive Testing & Material Verification\n(Complete Material & Product Testing Oversight)",
+                                    risk: "High",
+                                    ansYa: { f: "Pengujian dan pengetesan seluruh material dan produk divalidasi akurat sesuai metode uji resmi", a: "Pertahankan ketelitian pengujian material/produk", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Ditemukan pengujian material/produk dilakukan tanpa verifikasi parameter atau alat ukur valid", a: "Lakukan uji ulang sampel dan perketat kontrol parameter testing", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Tidak ada sampel material/produk khusus yang diuji", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "6. Apakah Manajemen Perubahan (Management of Change / MOC) terkait pembuatan, revisi, dan penarikan dokumen mutu (OP, WI, TM, Quality Plan, MSDS) dikendalikan secara ketat?",
+                                    std: "ISO 9001:2015 - Clause 7.5 & 8.5.6 (Control of Changes)\n(Documentary Management of Change & Version Control)",
+                                    risk: "High",
+                                    ansYa: { f: "Manajemen perubahan dokumen mutu dikendalikan ketat melalui MOC dan update ISO Online", a: "Pertahankan kontrol perubahan dokumen", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Revisi dokumen beredar tanpa prosedur MOC sah atau dokumen kedaluwarsa masih dipakai", a: "Tarik dokumen lama dan terbitkan MOC revisi segera", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Tidak ada perubahan dokumen pada periode ini", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "7. Apakah setting management system dan pemeliharaan struktur dokumen untuk setiap section/area di IKK dipastikan berjalan selaras dengan standar pusat?",
+                                    std: "ISO 9001:2015 - Clause 7.5 (Documented Information Structure)\n(Management System Architecture & Plant Alignment)",
+                                    risk: "Medium",
+                                    ansYa: { f: "Sistem manajemen dan struktur dokumentasi di setiap section IKK terpelihara selaras", a: "Pertahankan tata kelola struktur dokumen section", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Struktur dokumen di section tertentu belum tertata atau tidak sinkron dengan sistem pusat", a: "Lakukan penataan ulang struktur bersama koordinator section", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Area section sedang restrukturisasi", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Manpower",
+                                    q: "8. Apakah pelaksanaan training (sebagai trainer) bagi karyawan baru (NEO) dan karyawan existing terkait Quality Management System terlaksana secara profesional dan tuntas?",
+                                    std: "ISO 9001:2015 - Clause 7.2 & 7.3 (Competence & Training Delivery)\n(QMS Professional Training & Records)",
+                                    risk: "Medium",
+                                    ansYa: { f: "Training sosialisasi QMS bagi karyawan baru NEO dan existing terdokumentasi lengkap dalam training records", a: "Pertahankan kualitas delivery training mutu", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Karyawan baru/existing belum mendapat training QMS atau training records kosong", a: "Jadwalkan sesi training susulan dan lengkapi dokumentasi pelatihan", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Tidak ada perekrutan karyawan baru pada periode ini", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "9. Apakah pengusulan quality management system untuk section/area baru di IKK (termasuk analisis Mills Risk dan Form pendukung) telah diimplementasikan?",
+                                    std: "ISO 9001 Clause 4.4 & Clause 6.1 (Risk Assessment)\n(New Area QMS Setup & Mills Risk Integration)",
+                                    risk: "High",
+                                    ansYa: { f: "Sistem mutu untuk area baru di IKK termasuk analisis Mills Risk dan form pendukung telah diterapkan", a: "Pertahankan ekspansi sistem mutu", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Area baru beroperasi namun dokumen QMS pendukung dan Mills Risk belum diterapkan", a: "Susun dokumen QMS dan Mills Risk untuk area baru segera", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Tidak ada pembukaan area/section baru", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "10. Apakah analisis performa bisnis dan pengarahan perencanaan pengembangan/otomasi untuk meningkatkan keunggulan kompetitif didukung penuh oleh Supervisor?",
+                                    std: "ISO 9001:2015 - Clause 9.1 (Business Performance & Innovation)\n(Business Analysis & Quality Automation Support)",
+                                    risk: "Medium",
+                                    ansYa: { f: "Analisis performa bisnis dan usulan otomatisasi proses mutu didukung data terstruktur", a: "Lanjutkan inisiatif pengembangan otomasi", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Analisis performa bisnis tidak dilakukan atau usulan inovasi terabaikan", a: "Adakan evaluasi performa bersama manajemen operasional", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Kajian otomasi terjadwal pada akhir tahun", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "11. Apakah pengembangan proyek perbaikan berkelanjutan (SGA, JDI, dll) yang mendukung sistem manajemen terintegrasi dikoordinasikan secara aktif?",
+                                    std: "ISO 9001:2015 - Clause 10.3 (Continual Improvement & SGA/JDI)\n(Continuous Improvement Project Coordination)",
+                                    risk: "Low",
+                                    ansYa: { f: "Proyek SGA dan JDI dikoordinasikan aktif untuk mendukung sertifikasi dan efisiensi mutu", a: "Pertahankan budaya inovasi SGA/JDI", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Aktivitas proyek SGA/JDI tidak berjalan atau tidak terdokumentasi dengan baik", a: "Dorong fasilitator SGA/JDI untuk mengaktifkan project milestone", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Proyek perbaikan dikelola departemen lain", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Manpower",
+                                    q: "12. Apakah peningkatan keterampilan dan performa sumber daya manusia didukung melalui program pelatihan internal/eksternal untuk support kapabilitas analitis?",
+                                    std: "ISO 9001:2015 - Clause 7.2 (Competence & Skill Enhancement)\n(HR Capability & Analytical Skill Support)",
+                                    risk: "Medium",
+                                    ansYa: { f: "Program peningkatan kapabilitas SDM internal dan eksternal terlaksana sesuai matrix kompetensi", a: "Pertahankan pengembangan kompetensi staff", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Pelatihan peningkatan skill SDM tertunda dan belum mencapai target training hours", a: "Realisasikan program training internal sesuai jadwal", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Pelatihan dijadwalkan pada kuartal khusus", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "13. Apakah kebijakan perusahaan terkait Sustainability Compliance & Management System (ISO, EMS, Safety, MBOS) diimplementasikan dan dikawal konsisten?",
+                                    std: "ISO 14001 / ISO 45001 / MBOS / Sustainability Standards\n(Sustainability Compliance & MBOS Oversight)",
+                                    risk: "High",
+                                    ansYa: { f: "Kebijakan sustainability compliance, EMS, Safety, dan MBOS diimplementasikan dan dimonitor", a: "Pertahankan kepatuhan standar sustainability", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Implementasi standar sustainability atau MBOS di unit kerja belum optimal", a: "Lakukan audit kepatuhan sustainability bersama tim terkait", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Standar sustainability dikelola divisi khusus", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "14. Apakah pemeliharaan quality management system di setiap section terhadap temuan Internal dan External Audit dikelola dengan tindakan korektif (CAPA) yang tuntas?",
+                                    std: "ISO 9001:2015 - Clause 10.2 (Nonconformity and Corrective Action)\n(Audit Finding Corrective Action Closure)",
+                                    risk: "High",
+                                    ansYa: { f: "Temuan audit internal dan eksternal ditindaklanjuti dengan koreksi efektif dan ditutup tepat waktu", a: "Pertahankan siklus closed-loop audit", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Terdapat temuan audit internal/eksternal yang dibiarkan terbuka melewati batas waktu", a: "Percepat eksekusi CAPA dan tutup temuan audit segera", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Tidak ada temuan audit terbuka saat ini", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "15. Apakah penyelenggaraan Customer Satisfaction Survey (CSS) (pengiriman kuesioner, pelaporan, dan analisis survei) dilaksanakan secara profesional dan berkala?",
+                                    std: "ISO 9001:2015 - Clause 9.1.2 (Customer Satisfaction)\n(CSS Survey, Reporting & Analysis)",
+                                    risk: "Medium",
+                                    ansYa: { f: "CSS diselenggarakan, dilaporkan, dan dianalisis berkala untuk evaluasi kepuasan pelanggan", a: "Pertahankan program survei kepuasan pelanggan", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Pelaksanaan CSS tertunda atau hasil survei pelanggan belum dianalisis", a: "Jadwalkan pengiriman kuesioner CSS dan susun laporan analisis", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Jadwal CSS bukan pada periode bulan ini", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "16. Apakah koordinasi peninjauan dan pererevisian dokumen ISO bersama ISO koordinator plant berjalan aktif melalui forum berkala?",
+                                    std: "ISO 9001:2015 - Clause 7.5 / Document Review Process\n(ISO Plant Coordinator Alignment & Review)",
+                                    risk: "Medium",
+                                    ansYa: { f: "Koordinasi peninjauan berkala dokumen ISO bersama koordinator plant berjalan aktif", a: "Pertahankan sinergi dokumen lintas plant", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Dokumen ISO di plant jarang ditinjau ulang sehingga banyak yang kedaluwarsa", a: "Adakan pertemuan review dokumen rutin dengan koordinator plant", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Review dokumen dikelola secara terpusat", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "17. Apakah komunikasi dengan Badan Sertifikasi terkait pelaksanaan audit eksternal dan pengiriman jawaban konfirmasi temuan Minor dikelola tepat waktu?",
+                                    std: "ISO 9001:2015 - External Certification Body Management\n(Certification Body Communication & Audit Response)",
+                                    risk: "High",
+                                    ansYa: { f: "Komunikasi dengan badan sertifikasi dan pengiriman respon temuan Minor tepat waktu", a: "Pertahankan hubungan baik dengan badan sertifikasi", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Pengiriman jawaban temuan audit eksternal ke badan sertifikasi mengalami keterlambatan", a: "Segera selesaikan tanggapan temuan dan kirimkan ke auditor eksternal", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Tidak ada jadwal audit eksternal pada periode ini", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "18. Apakah penutupan dokumen ANCR (Audit Non Conformance Report) temuan audit internal diverifikasi kesesuaian buktinya sebelum disetujui?",
+                                    std: "ISO 9001:2015 - ANCR & Internal Audit Finding Verification\n(ANCR Closure Verification & Evidence Review)",
+                                    risk: "High",
+                                    ansYa: { f: "Penutupan dokumen ANCR diverifikasi ketat berdasarkan bukti perbaikan lapangan yang valid", a: "Pertahankan validitas verifikasi ANCR", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "ANCR ditutup tanpa verifikasi bukti perbaikan lapangan yang memadai", a: "Tinjau ulang bukti penyelesaian dan tolak penutupan jika belum valid", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Tidak ada ANCR aktif saat ini", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Measurement",
+                                    q: "19. Apakah pengendalian dan pengawasan terhadap pelaksanaan kalibrasi alat ukur lab serta verifikasinya termonitor konsisten untuk menjamin ketelusuran?",
+                                    std: "ISO 9001:2015 - Clause 7.1.5 (Monitoring & Measuring Resources)\n(Calibration System Oversight & Metrological Traceability)",
+                                    risk: "High",
+                                    ansYa: { f: "Sistem kalibrasi dan verifikasi alat ukur lab dimonitor konsisten memastikan keandalan data", a: "Pertahankan sistem penjaminan pengukuran lab", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Sistem kalibrasi alat lab longgar atau instrumen telat dikalibrasi", a: "Perketat master schedule kalibrasi alat ukur", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Pengelolaan kalibrasi eksternal khusus", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                },
+                                {
+                                    pilar: "Method",
+                                    q: "20. Apakah pelaksanaan proses Quality Management System divalidasi ketaatannya terhadap standar mutu internasional dan regulasi operasional secara menyeluruh?",
+                                    std: "ISO 9001:2015 - Clause 9.3 (Management Review & Compliance)\n(QMS Process Compliance & Operational Validation)",
+                                    risk: "High",
+                                    ansYa: { f: "Proses Quality Management System divalidasi taat terhadap standar mutu global dan regulasi", a: "Pertahankan kepatuhan menyeluruh sistem mutu", actStat: "Closed", r: "Conformance (Sesuai)" },
+                                    ansTidak: { f: "Ketaatan terhadap proses QMS di lapangan melemah tanpa tindakan korektif", a: "Lakukan audit proses menyeluruh dan perkuat penegakan sistem", actStat: "Open", r: "Non-Conformance" },
+                                    ansNA: { f: "Evaluasi terjadwal", a: "N/A", actStat: "Closed", r: "Not Applicable" }
+                                }
+                            ];
+
+                            defaultItems_20.forEach((item, idx) => {
+                                let num = String(idx + 1).padStart(2, '0');
+
+                                document.write(`
+                                    <tr>
+                                        <td class="col-no">${num}</td>
+                                        <td class="col-pilar">
+                                            <select class="cell-select pilar-select">
+                                                <option ${item.pilar === 'Method' ? 'selected' : ''}>📋 Method</option>
+                                                <option ${item.pilar === 'Machine' ? 'selected' : ''}>⚙️ Machine</option>
+                                                <option ${item.pilar === 'Manpower' ? 'selected' : ''}>👤 Manpower</option>
+                                                <option ${item.pilar === 'Material' ? 'selected' : ''}>📦 Material</option>
+                                                <option ${item.pilar === 'Measurement' ? 'selected' : ''}>📏 Measurement</option>
+                                                <option ${item.pilar === 'Environment' ? 'selected' : ''}>🌱 Environment</option>
+                                                <option ${item.pilar === 'Safety' ? 'selected' : ''}>🦺 Safety</option>
+                                            </select>
+                                        </td>
+                                        <td><textarea class="cell-input question-input" style="resize:vertical; min-height:45px; background:#fff;" rows="2">${item.q}</textarea></td>
+                                        <td><textarea class="cell-input std-input" style="resize:vertical; min-height:45px; background:#fff;" rows="2">${item.std}</textarea></td>
+                                        <td class="col-risk">
+                                            <select class="cell-select risk-select ${item.risk === 'High' ? 'risk-high' : (item.risk === 'Medium' ? 'risk-med' : 'risk-low')}" onchange="updateRiskStyle(this)">
+                                                <option value="High" ${item.risk === 'High' ? 'selected' : ''}>High</option>
+                                                <option value="Med" ${item.risk === 'Medium' ? 'selected' : ''}>Medium</option>
+                                                <option value="Low" ${item.risk === 'Low' ? 'selected' : ''}>Low</option>
+                                            </select>
+                                        </td>
+                                        <td class="col-status">
+                                            <select class="cell-select status-select status-ya" data-index="${idx}" onchange="onStatusChange(this)">
+                                                <option value="YA">✓ Ya</option>
+                                                <option value="TIDAK">✕ Tidak</option>
+                                                <option value="NA">— N/A</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <textarea class="cell-input finding-input" style="resize:vertical; min-height:45px;" rows="2">${item.ansYa.f}</textarea>
+                                        </td>
+                                        <td>
+                                            <textarea class="cell-input action-input" style="resize:vertical; min-height:45px;" rows="2">${item.ansYa.a}</textarea>
+                                        </td>
+                                        <td class="col-action-status">
+                                            <select class="cell-select act-status-select act-status-closed" onchange="updateActionStatusStyle(this)">
+                                                <option value="Closed" ${item.ansYa.actStat === 'Closed' ? 'selected' : ''}>Closed</option>
+                                                <option value="Progress" ${item.ansYa.actStat === 'Progress' ? 'selected' : ''}>Progress</option>
+                                                <option value="Open" ${item.ansYa.actStat === 'Open' ? 'selected' : ''}>Open</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <textarea class="cell-input remark-input" style="resize:vertical; min-height:45px; font-weight:700; color:#15803d; background:#dcfce7;" rows="2">${item.ansYa.r}</textarea>
+                                        </td>
+                                    </tr>
+                                `);
+                            });
+                        </script>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- KOTAK KOMENTAR AUDITOR UTAMA -->
+            <div class="main-comment-box">
+                <label for="auditorComment">Komentar Auditor:</label>
+                <textarea id="auditorComment" rows="3" placeholder="Masukkan catatan / rekomendasi menyeluruh dari auditor sistem manajemen mutu untuk Supervisor QMS di sini..."></textarea>
+            </div>
+
+            <!-- Tanda Tangan / Signatures Grid -->
+            <div class="sign-grid">
+                <!-- Kolom 1: Auditor Layer 2 -->
+                <div class="sign-card" id="cardSign1">
+                    <div>
+                        <span class="role">Auditor Layer 2</span>
+                        <div class="digital-stamp" id="stamp1">✅ DIGITALLY SIGNED<br><span id="timeSign1" style="font-size: 8.5px;"></span></div>
+                    </div>
+                    <div>
+                        <div class="sign-line" id="lineSign1">Tanda Tangan</div>
+                        <input type="text" class="name" id="signAuditor" value="">
+                        <input type="text" class="title" value="Auditor Layer 2">
+                        <button class="btn btn-purple btn-sign" style="margin-top: 6px; width: 100%; font-size: 10px; padding: 5px;" onclick="executeDigitalSign(1)">Sign</button>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Auditee Layer 2 -->
+                <div class="sign-card" id="cardSign2">
+                    <div>
+                        <span class="role">Auditee Layer 2</span>
+                        <div class="digital-stamp" id="stamp2">✅ DIGITALLY SIGNED<br><span id="timeSign2" style="font-size: 8.5px;"></span></div>
+                    </div>
+                    <div>
+                        <div class="sign-line" id="lineSign2">Tanda Tangan</div>
+                        <input type="text" class="name" id="signAuditee" value="">
+                        <input type="text" class="title" value="Auditee Layer 2">
+                        <button class="btn btn-purple btn-sign" style="margin-top: 6px; width: 100%; font-size: 10px; padding: 5px;" onclick="executeDigitalSign(2)">Sign</button>
+                    </div>
+                </div>
+
+                <!-- Kolom 3: Manager Layer 3 -->
+                <div class="sign-card" id="cardSign3">
+                    <div>
+                        <span class="role">Manager Layer 3</span>
+                        <div class="digital-stamp" id="stamp3">✅ DIGITALLY SIGNED<br><span id="timeSign3" style="font-size: 8.5px;"></span></div>
+                    </div>
+                    <div>
+                        <div class="sign-line" id="lineSign3">Tanda Tangan</div>
+                        <input type="text" class="name" id="signL2" value="">
+                        <input type="text" class="title" value="Manager Layer 3">
+                        <button class="btn btn-purple btn-sign" style="margin-top: 6px; width: 100%; font-size: 10px; padding: 5px;" onclick="executeDigitalSign(3)">Sign</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('auditDate').valueAsDate = new Date();
+
+        function executeDigitalSign(id) {
+            const line = document.getElementById('lineSign' + id);
+            const stamp = document.getElementById('stamp' + id);
+            const timeSpan = document.getElementById('timeSign' + id);
+            const nameInput = id === 1 ? document.getElementById('signAuditor') : (id === 2 ? document.getElementById('signAuditee') : document.getElementById('signL2'));
+
+            if (!nameInput.value.trim()) {
+                alert('Mohon ketik nama terlebih dahulu pada kolom input di atas tombol Sign!');
+                nameInput.focus();
+                return;
+            }
+
+            const now = new Date();
+            const timeString = now.toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' }) + ' ' + now.toLocaleTimeString('id-ID');
+
+            line.style.display = 'none';
+            stamp.style.display = 'block';
+            timeSpan.innerText = `Oleh: ${nameInput.value} (${timeString})`;
+        }
+
+        function updateRiskStyle(select) {
+            select.className = "cell-select risk-select";
+            if (select.value === 'High') select.classList.add('risk-high');
+            else if (select.value === 'Med') select.classList.add('risk-med');
+            else if (select.value === 'Low') select.classList.add('risk-low');
+        }
+
+        function updateActionStatusStyle(select) {
+            select.className = "cell-select act-status-select";
+            if (select.value === 'Open') select.classList.add('act-status-open');
+            else if (select.value === 'Progress') select.classList.add('act-status-progress');
+            else if (select.value === 'Closed') select.classList.add('act-status-closed');
+        }
+
+        // Database jawaban default untuk status YA (Conformance -> Closed)
+        const yesDataAnswers = [
+            { f: "Master audit plan tahunan QMS tersusun lengkap dan mencakup seluruh standar sertifikasi plant", a: "Pertahankan konsistensi jadwal audit", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Jadwal audit IKMS IKK berjalan tertib sesuai cakupan area sertifikasi mutu", a: "Pertahankan kedisiplinan audit IKMS", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Audit internal dan eksternal QMS terlaksana sesuai target waktu dan metodologi efektif", a: "Pertahankan efektivitas pelaksanaan audit", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Sistem manajemen dan struktur dokumentasi di setiap section IKK terpelihara optimal", a: "Pertahankan tata kelola sistem manajemen section", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Dokumen OP, WI, TM, MSDS, dan Quality Plan terbaru telah di-upload dan aktif di ISO Online", a: "Pertahankan kontrol dokumen digital", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Pengujian dan sertifikasi produk (recycleable, FDA, RoHS, dll) divalidasi akurat sesuai metode uji resmi", a: "Pertahankan ketelitian pengujian material/produk", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Penerapan 5S di area office QMS, ruang arsip, dan lab terjaga sangat bersih, rapi, dan teratur", a: "Pertahankan standar 5S office harian", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Training sosialisasi QMS bagi karyawan baru NEO dan existing terdokumentasi lengkap (training records)", a: "Pertahankan program awareness mutu", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Sistem mutu untuk area baru di IKK termasuk Mills Risk dan form pendukung telah diterapkan", a: "Pertahankan ekspansi sistem mutu", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Analisis performa bisnis dan usulan otomatisasi proses mutu dikaji terstruktur", a: "Lanjutkan inisiatif pengembangan otomasi", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Proyek SGA dan JDI aktif dikelola untuk mendukung sertifikasi dan efisiensi mutu", a: "Pertahankan budaya inovasi SGA/JDI", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Program peningkatan kapabilitas SDM internal dan eksternal terlaksana sesuai matrix kompetensi", a: "Pertahankan pengembangan kompetensi staff", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Kebijakan sustainability compliance, EMS, Safety, dan MBOS diimplementasikan dan dimonitor", a: "Pertahankan kepatuhan standar sustainability", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Temuan audit internal dan eksternal ditindaklanjuti dengan koreksi efektif dan ditutup tepat waktu", a: "Pertahankan siklus closed-loop audit", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "CSS diselenggarakan, dilaporkan, dan dianalisis berkala untuk evaluasi kepuasan pelanggan", a: "Pertahankan program survei kepuasan pelanggan", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Koordinasi peninjauan berkala dokumen ISO bersama koordinator plant berjalan aktif", a: "Pertahankan sinergi dokumen lintas plant", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Komunikasi dengan badan sertifikasi dan pengiriman respon temuan Minor tepat waktu", a: "Pertahankan hubungan baik dengan badan sertifikasi", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Penutupan dokumen ANCR diverifikasi ketat berdasarkan bukti perbaikan lapangan yang valid", a: "Pertahankan validitas verifikasi ANCR", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Sistem kalibrasi dan verifikasi alat ukur lab dimonitor konsisten memastikan keandalan data", a: "Pertahankan sistem penjaminan pengukuran lab", actStat: "Closed", r: "Conformance (Sesuai)" },
+            { f: "Proses Quality Management System divalidasi taat terhadap standar mutu global dan regulasi", a: "Pertahankan kepatuhan menyeluruh sistem mutu", actStat: "Closed", r: "Conformance (Sesuai)" }
+        ];
+
+        // Database jawaban default untuk status TIDAK (Non-Conformance -> Open)
+        const noDataAnswers = [
+            { f: "Master audit plan belum mencakup seluruh standar wajib atau terlambat disahkan", a: "Segera lengkapi cakupan audit plan dan sosialisasikan ke departemen", actStat: "Open", r: "Non-Conformance" },
+            { f: "Pelaksanaan audit IKMS tertunda dari jadwal yang ditetapkan dalam program", a: "Reschedule audit IKMS dan kejar target penyelesaian", actStat: "Open", r: "Non-Conformance" },
+            { f: "Temuan audit belum diselesaikan atau pelaksanaan audit melenceng dari prosedur objektif", a: "Percepat tindak lanjut temuan audit bersama auditee", actStat: "Open", r: "Non-Conformance" },
+            { f: "Penerapan 5S di office QMS menurun, arsip dokumen berantakan atau meja kerja kotor", a: "Jadwalkan kegiatan perbaikan 5S dan rapikan area kerja QMS", actStat: "Open", r: "Non-Conformance" },
+            { f: "Ditemukan pengujian material/produk dilakukan tanpa verifikasi parameter atau alat ukur valid", a: "Lakukan uji ulang sampel dan perketat kontrol parameter testing", actStat: "Open", r: "Non-Conformance" },
+            { f: "Revisi dokumen beredar tanpa prosedur MOC sah atau dokumen kedaluwarsa masih dipakai", a: "Tarik dokumen lama dan terbitkan MOC revisi segera", actStat: "Open", r: "Non-Conformance" },
+            { f: "Struktur dokumen di section tertentu belum tertata atau tidak sinkron dengan sistem pusat", a: "Lakukan penataan ulang struktur bersama koordinator section", actStat: "Open", r: "Non-Conformance" },
+            { f: "Karyawan baru/existing belum mendapat training QMS atau training records kosong", a: "Jadwalkan sesi training susulan dan lengkapi dokumentasi pelatihan", actStat: "Open", r: "Non-Conformance" },
+            { f: "Area baru beroperasi namun dokumen QMS pendukung dan Mills Risk belum diterapkan", a: "Susun dokumen QMS dan Mills Risk untuk area baru segera", actStat: "Open", r: "Non-Conformance" },
+            { f: "Analisis performa bisnis tidak dilakukan atau usulan inovasi terabaikan", a: "Adakan evaluasi performa bersama manajemen operasional", actStat: "Open", r: "Non-Conformance" },
+            { f: "Aktivitas proyek SGA/JDI tidak berjalan atau tidak terdokumentasi dengan baik", a: "Dorong fasilitator SGA/JDI untuk mengaktifkan project milestone", actStat: "Open", r: "Non-Conformance" },
+            { f: "Pelatihan peningkatan skill SDM tertunda dan belum mencapai target training hours", a: "Realisasikan program training internal sesuai jadwal", actStat: "Open", r: "Non-Conformance" },
+            { f: "Implementasi standar sustainability atau MBOS di unit kerja belum optimal", a: "Lakukan audit kepatuhan sustainability bersama tim terkait", actStat: "Open", r: "Non-Conformance" },
+            { f: "Terdapat temuan audit internal/eksternal yang dibiarkan terbuka melewati batas waktu", a: "Percepat eksekusi CAPA dan tutup temuan audit segera", actStat: "Open", r: "Non-Conformance" },
+            { f: "Pelaksanaan CSS tertunda atau hasil survei pelanggan belum dianalisis", a: "Jadwalkan pengiriman kuesioner CSS dan susun laporan analisis", actStat: "Open", r: "Non-Conformance" },
+            { f: "Dokumen ISO di plant jarang ditinjau ulang sehingga banyak yang kedaluwarsa", a: "Adakan pertemuan review dokumen rutin dengan koordinator plant", actStat: "Open", r: "Non-Conformance" },
+            { f: "Pengiriman jawaban temuan audit eksternal ke badan sertifikasi mengalami keterlambatan", a: "Segera selesaikan tanggapan temuan dan kirimkan ke auditor eksternal", actStat: "Open", r: "Non-Conformance" },
+            { f: "ANCR ditutup tanpa verifikasi bukti perbaikan lapangan yang memadai", a: "Tinjau ulang bukti penyelesaian dan tolak penutupan jika belum valid", actStat: "Open", r: "Non-Conformance" },
+            { f: "Sistem kalibrasi alat lab longgar atau instrumen telat dikalibrasi", a: "Perketat master schedule kalibrasi alat ukur", actStat: "Open", r: "Non-Conformance" },
+            { f: "Ketaatan terhadap proses QMS di lapangan melemah tanpa tindakan korektif", a: "Lakukan audit proses menyeluruh dan perkuat penegakan sistem", actStat: "Open", r: "Non-Conformance" }
+        ];
+
+        function onStatusChange(statusSelect) {
+            const row = statusSelect.closest('tr');
+            const findingInput = row.querySelector('.finding-input');
+            const actionInput = row.querySelector('.action-input');
+            const actStatSelect = row.querySelector('.act-status-select');
+            const remarkInput = row.querySelector('.remark-input');
+            const index = parseInt(statusSelect.getAttribute('data-index'));
+            const yesAns = yesDataAnswers[index];
+            const noAns = noDataAnswers[index];
+
+            statusSelect.className = "cell-select status-select";
+
+            if (statusSelect.value === 'YA') {
+                statusSelect.classList.add('status-ya');
+                findingInput.value = yesAns.f;
+                actionInput.value = yesAns.a;
+                actStatSelect.value = yesAns.actStat;
+                updateActionStatusStyle(actStatSelect);
+                remarkInput.value = yesAns.r;
+                remarkInput.style.background = "#dcfce7";
+                remarkInput.style.color = "#15803d";
+            } else if (statusSelect.value === 'TIDAK') {
+                statusSelect.classList.add('status-tidak');
+                findingInput.value = noAns.f;
+                actionInput.value = noAns.a;
+                actStatSelect.value = noAns.actStat;
+                updateActionStatusStyle(actStatSelect);
+                remarkInput.value = noAns.r;
+                remarkInput.style.background = "#fee2e2";
+                remarkInput.style.color = "#b91c1c";
+            } else if (statusSelect.value === 'NA') {
+                statusSelect.classList.add('status-na');
+                findingInput.value = "Parameter N/A (Tidak berlaku untuk ruang lingkup shift/area berjalan)";
+                actionInput.value = "N/A";
+                actStatSelect.value = "Closed";
+                updateActionStatusStyle(actStatSelect);
+                remarkInput.value = "Not Applicable";
+                remarkInput.style.background = "#f1f5f9";
+                remarkInput.style.color = "#475569";
+            }
+
+            updateDashboard();
+        }
+
+        function updateDashboard() {
+            const selects = document.querySelectorAll('.status-select');
+            let ya = 0, tidak = 0, na = 0;
+            let failureDetails = [];
+
+            selects.forEach((sel, idx) => {
+                if (sel.value === 'YA') { ya++; }
+                else if (sel.value === 'TIDAK') { 
+                    tidak++; 
+                    const row = sel.closest('tr');
+                    const riskVal = row.querySelector('.risk-select').value;
+                    const findingText = row.querySelector('.finding-input').value;
+                    const actionText = row.querySelector('.action-input').value;
+                    const actStatVal = row.querySelector('.act-status-select').value;
+                    failureDetails.push({ no: idx + 1, risk: riskVal, finding: findingText, action: actionText, actStat: actStatVal });
+                }
+                else if (sel.value === 'NA') { na++; }
+            });
+
+            const totalItems = selects.length;
+            const activePoints = totalItems - na;
+            let percent = activePoints > 0 ? ((ya / activePoints) * 100).toFixed(1) : 0;
+
+            document.getElementById('countTotal').innerText = totalItems;
+            document.getElementById('countYes').innerText = ya;
+            document.getElementById('countNo').innerText = tidak;
+            document.getElementById('countNA').innerText = na;
+            document.getElementById('countActive').innerText = activePoints;
+            document.getElementById('compliancePercent').innerText = percent + '%';
+
+            const sumRate = document.getElementById('sumComplianceRate');
+            const sumFail = document.getElementById('sumTotalFail');
+            const sumBadge = document.getElementById('summaryBadge');
+            const sumRateDesc = document.getElementById('sumRateDesc');
+            const sumFailDesc = document.getElementById('sumFailDesc');
+            const sumRec = document.getElementById('sumRecommendation');
+
+            sumRate.innerText = percent + '%';
+            sumFail.innerText = tidak + ' Item';
+
+            if (tidak === 0) {
+                sumBadge.innerText = "STATUS: FULLY CONFORMANCE / OPTIMAL";
+                sumBadge.style.backgroundColor = "#ecfdf5"; sumBadge.style.color = "#059669"; sumBadge.style.borderColor = "#a7f3d0";
+                sumRate.style.color = "#059669"; sumFail.style.color = "#059669";
+                sumRateDesc.innerText = "Memenuhi standar implementasi sistem manajemen mutu, 5S office/lab, pengujian material, dan MOC.";
+                sumFailDesc.innerText = "Tidak teridentifikasi celah pada audit internal, kendali MOC, pengujian sertifikasi produk, maupun standar 5S.";
+                sumRec.innerHTML = "<strong>Optimal Performance:</strong> Seluruh 20 parameter verifikasi Supervisor QMS berjalan sangat baik sesuai standar profesional perusahaan.";
+            } else {
+                sumBadge.innerText = `STATUS: ADA TEMUAN KETIDAKSESUAIAN (${tidak} ITEM)`;
+                sumBadge.style.backgroundColor = "#fff1f2"; sumBadge.style.color = "#dc2626"; sumBadge.style.borderColor = "#fecaca";
+                sumRate.style.color = "#dc2626"; sumFail.style.color = "#dc2626";
+                sumRateDesc.innerText = `Terdapat ${tidak} poin yang belum sesuai standar profesional Supervisor QMS dan memerlukan tindakan korektif.`;
+                sumFailDesc.innerText = `Ditemukan ketidaksesuaian pada klausul sistem manajemen yang mencakup level risiko terkait.`;
+                
+                let recHtml = `<strong>Rincian Temuan Supervisor QMS & Status Tindak Lanjut (${tidak} Poin - Wajib Closing maks. 3x24 jam):</strong><ul style="margin-left: 15px; margin-top: 4px; font-size: 10.5px;">`;
+                failureDetails.forEach(item => {
+                    let badgeColor = item.risk === 'High' ? 'color:#b91c1c; font-weight:900;' : (item.risk === 'Med' ? 'color:#a16207; font-weight:900;' : 'color:#15803d; font-weight:900;');
+                    recHtml += `<li><strong>Poin #${item.no} [<span style="${badgeColor}">${item.risk} Risk</span> - Status: ${item.actStat}]:</strong> ${item.finding}. <em>Action:</em> ${item.action} <span style="color: #dc2626; font-weight: 600;">(Deadline: Max 3x24 Jam)</span></li>`;
+                });
+                recHtml += `</ul>`;
+                sumRec.innerHTML = recHtml;
+            }
+
+            const maxVal = activePoints > 0 ? activePoints : 1;
+            document.getElementById('barYes').style.height = Math.round((ya / maxVal) * 42) + 'px';
+            document.getElementById('barYesVal').innerText = ya;
+            document.getElementById('barNo').style.height = Math.round((tidak / maxVal) * 42) + 'px';
+            document.getElementById('barNoVal').innerText = tidak;
+        }
+
+        function setAllYes() {
+            document.querySelectorAll('.status-select').forEach(sel => {
+                sel.value = 'YA';
+                onStatusChange(sel);
+            });
+        }
+
+        function resetForm() {
+            if (confirm('Reset seluruh isian form LPA Supervisor QMS 20 Item ini?')) {
+                localStorage.removeItem('lpa_supervisor_qms_pro_saved_data');
+                document.querySelectorAll('.status-select').forEach(sel => {
+                    sel.value = 'YA';
+                    onStatusChange(sel);
+                });
+                document.getElementById('auditorComment').value = '';
+                document.querySelectorAll('.digital-stamp').forEach(st => st.style.display = 'none');
+                document.querySelectorAll('.sign-line').forEach(ln => ln.style.display = 'flex');
+                document.getElementById('auditDate').valueAsDate = new Date();
+                alert('Form Supervisor QMS berhasil di-reset.');
+            }
+        }
+
+        function downloadHtmlFile() {
+            const htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'LPA_Layer2_Supervisor_QMS_Professional.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function saveFormLocally() {
+            const formData = {
+                metaArea: document.getElementById('metaArea').value,
+                metaAuditor: document.getElementById('metaAuditor').value,
+                metaAuditee: document.getElementById('metaAuditee').value,
+                metaFrequency: document.getElementById('metaFrequency').value,
+                auditDate: document.getElementById('auditDate').value,
+                auditShift: document.getElementById('auditShift').value,
+                metaL2: document.getElementById('metaL2').value,
+                auditorComment: document.getElementById('auditorComment').value,
+                rows: []
+            };
+
+            document.querySelectorAll('#lpaTable tbody tr').forEach((row) => {
+                formData.rows.push({
+                    pilar: row.querySelector('.pilar-select').value,
+                    question: row.querySelector('.question-input').value,
+                    std: row.querySelector('.std-input').value,
+                    risk: row.querySelector('.risk-select').value,
+                    status: row.querySelector('.status-select').value,
+                    finding: row.querySelector('.finding-input').value,
+                    action: row.querySelector('.action-input').value,
+                    actStat: row.querySelector('.act-status-select').value,
+                    remark: row.querySelector('.remark-input').value
+                });
+            });
+
+            formData.signatures = {
+                stamp1: document.getElementById('stamp1').style.display,
+                time1: document.getElementById('timeSign1').innerText,
+                stamp2: document.getElementById('stamp2').style.display,
+                time2: document.getElementById('timeSign2').innerText,
+                stamp3: document.getElementById('stamp3').style.display,
+                time3: document.getElementById('timeSign3').innerText,
+            };
+
+            localStorage.setItem('lpa_supervisor_qms_pro_saved_data', JSON.stringify(formData));
+            alert('Sukses! Data form Supervisor QMS berhasil disimpan di browser Anda.');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('lpa_supervisor_qms_pro_saved_data');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    document.getElementById('metaArea').value = data.metaArea || 'Indah Kiat Karawang (IKK) QMS Area';
+                    document.getElementById('metaAuditor').value = data.metaAuditor || '';
+                    document.getElementById('metaAuditee').value = data.metaAuditee || '';
+                    document.getElementById('metaFrequency').value = data.metaFrequency || '';
+                    document.getElementById('auditDate').value = data.auditDate || '';
+                    document.getElementById('auditShift').value = data.auditShift || '';
+                    document.getElementById('metaL2').value = data.metaL2 || '';
+                    document.getElementById('auditorComment').value = data.auditorComment || '';
+                    
+                    updateAreaSelection();
+                    syncManualSelection();
+
+                    if (data.rows && data.rows.length > 0) {
+                        const trs = document.querySelectorAll('#lpaTable tbody tr');
+                        data.rows.forEach((rData, i) => {
+                            if (trs[i]) {
+                                trs[i].querySelector('.pilar-select').value = rData.pilar;
+                                trs[i].querySelector('.question-input').value = rData.question;
+                                trs[i].querySelector('.std-input').value = rData.std;
+                                
+                                const riskSel = trs[i].querySelector('.risk-select');
+                                riskSel.value = rData.risk;
+                                updateRiskStyle(riskSel);
+
+                                const statSel = trs[i].querySelector('.status-select');
+                                statSel.value = rData.status;
+                                
+                                trs[i].querySelector('.finding-input').value = rData.finding;
+                                trs[i].querySelector('.action-input').value = rData.action;
+                                
+                                const actStatSel = trs[i].querySelector('.act-status-select');
+                                actStatSel.value = rData.actStat || 'Closed';
+                                updateActionStatusStyle(actStatSel);
+
+                                const remInput = trs[i].querySelector('.remark-input');
+                                remInput.value = rData.remark;
+
+                                if(rData.status === 'YA') {
+                                    statSel.className = "cell-select status-select status-ya";
+                                    remInput.style.background = "#dcfce7"; remInput.style.color = "#15803d";
+                                } else if(rData.status === 'TIDAK') {
+                                    statSel.className = "cell-select status-select status-tidak";
+                                    remInput.style.background = "#fee2e2"; remInput.style.color = "#b91c1c";
+                                } else {
+                                    statSel.className = "cell-select status-select status-na";
+                                    remInput.style.background = "#f1f5f9"; remInput.style.color = "#475569";
+                                }
+                            }
+                        });
+                    }
+
+                    if (data.signatures) {
+                        if (data.signatures.stamp1 === 'block') {
+                            document.getElementById('lineSign1').style.display = 'none';
+                            document.getElementById('stamp1').style.display = 'block';
+                            document.getElementById('timeSign1').innerText = data.signatures.time1;
+                        }
+                        if (data.signatures.stamp2 === 'block') {
+                            document.getElementById('lineSign2').style.display = 'none';
+                            document.getElementById('stamp2').style.display = 'block';
+                            document.getElementById('timeSign2').innerText = data.signatures.time2;
+                        }
+                        if (data.signatures.stamp3 === 'block') {
+                            document.getElementById('lineSign3').style.display = 'none';
+                            document.getElementById('stamp3').style.display = 'block';
+                            document.getElementById('timeSign3').innerText = data.signatures.time3;
+                        }
+                    }
+
+                    updateDashboard();
+                } catch(e) {
+                    console.error("Gagal memuat data tersimpan:", e);
+                }
+            } else {
+                updateDashboard();
+            }
+        });
+
+        function syncManualSelection() {
+            let auditor = document.getElementById('metaAuditor').value;
+            let auditee = document.getElementById('metaAuditee').value;
+            let l2 = document.getElementById('metaL2').value;
+
+            document.getElementById('signAuditor').value = auditor;
+            document.getElementById('signAuditee').value = auditee;
+            document.getElementById('signL2').value = l2;
+        }
+
+        function updateAreaSelection() {
+            let area = document.getElementById('metaArea').value;
+            document.getElementById('headerSubTitle').innerText = "LAYERED PROCESS AUDIT (LPA) - " + area.toUpperCase() + " (20 ITEM PROFESSIONAL CHECKLIST)";
+            document.getElementById('subFormTitle').innerText = "VERIFIKASI QMS, 5S OFFICE/LAB, PENGUJIAN MATERIAL & MOC " + area.toUpperCase();
+        }
+
+        document.querySelectorAll('.risk-select').forEach(sel => updateRiskStyle(sel));
+        document.querySelectorAll('.act-status-select').forEach(sel => updateActionStatusStyle(sel));
+
+        async function submitToDatabase() {
+            const stamp1 = document.getElementById('stamp1').style.display;
+            if (stamp1 !== 'block') {
+                alert('Peringatan: Auditor belum melakukan penandatanganan digital (Sign)! Harap selesaikan ttd terlebih dahulu.');
+                return;
+            }
+
+            if (!confirm('Kirim laporan hasil audit Supervisor QMS Professional LPA ini ke sistem database server?')) {
+                return;
+            }
+
+            try {
+                const auditPayload = {
+                    form_id: document.getElementById('formIdText').innerText,
+                    auditor: document.getElementById('metaAuditor').value,
+                    auditee: document.getElementById('metaAuditee').value,
+                    auditor_comment: document.getElementById('auditorComment').value,
+                    compliance_rate: document.getElementById('compliancePercent').innerText,
+                    total_findings: document.getElementById('countNo').innerText + " Item"
+                };
+
+                const webAppUrl = 'https://script.google.com/macros/s/AKfycbxl6QZf6FwrkZT4-q4Y95S7cMlfTaKgLhNsEhCtCGTXdr6YkgBc0YNVFEnSIkIL9rpJgg/exec'; 
+
+                await fetch(webAppUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(auditPayload)
+                });
+
+                alert('Berhasil! Laporan audit Supervisor QMS telah dikirim ke Database.');
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Gagal mengirim data: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>
